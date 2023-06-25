@@ -1,0 +1,34 @@
+{% extends 'base.html' %}   
+
+
+{% block title %}   Lets Convert Currency   {% endblock %}  
+
+
+
+{% block content %}    
+
+    <form id='convert-form' action="/convert-form-submit" method="POST">
+
+        <label for="fromcurrency"> From Currency: </label>
+        <input type="text" id="from-currency" name="fromcurrency" placeholder="Ex. USD">
+        
+
+        <label for="tocurrency"> To Currency: </label>
+        <input type="text" id="to-currency" name="tocurrency" placeholder="Ex. EUR">
+
+        <label for="totalamount"> Total Amount to Convert: </label>
+        <input type="text" id="total-amount" name="totalamount" placeholder="Ex. 50">
+
+
+    </form>
+
+
+    <button id='my-button' type="submit" form="convert-form"> Convert Currency </button>
+
+    {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+    {% endfor %}
+
+{% endblock %}
+
+

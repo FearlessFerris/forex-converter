@@ -1,0 +1,19 @@
+{% extends 'base.html' %}   
+
+
+{% block title %}  Convert Form Submit {% endblock %}  
+
+{% block content %}   
+
+
+    <h3> Currency to Convert From: {{fromcurrency}} </h3>
+    <h3> Currency to Convert To: {{tocurrency}}  </h3>
+    <h3> Total Amount to Convert: {{totalamount}}  </h3>
+
+
+    <h3 id="total-am"> Converted Total: {{convertedtotal}} as of {{date}}  </h3>
+
+
+    
+
+{% endblock %}
